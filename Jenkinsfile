@@ -8,10 +8,11 @@ pipeline {
          stage("git clone") {
              git url: "https://github.com/KanhaiyaITGIT/IRCTC-MVN.git", branch: main
          }
-    }
+    
          stage("build") {
               steps {
                    sh "mvn clean packages"
               }
-     }
+         }    
+    }   
 }
