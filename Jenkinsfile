@@ -6,7 +6,9 @@ pipeline {
 
     stages {
          stage("git clone") {
-             git url: "https://github.com/KanhaiyaITGIT/IRCTC-MVN.git", branch: main
+             steps {
+                 git url: "https://github.com/KanhaiyaITGIT/IRCTC-MVN.git", branch: main
+             }
          }
     
          stage("build") {
